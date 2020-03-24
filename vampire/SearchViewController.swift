@@ -11,6 +11,7 @@ import CoreData
 import JGProgressHUD
 import SDWebImage
 import WebKit
+import SCLAlertView
 
 class SearchViewController: UIViewController {
 
@@ -47,12 +48,14 @@ class SearchViewController: UIViewController {
         dataApps = try! manageContent.fetch(fetchRequest) as! [Apps]
         
         if(dataApps.count > 0) {
-            
-            let hud = JGProgressHUD(style: .dark)
-            hud.textLabel.text = "Will display first app only"
-            hud.show(in: self.view)
-            hud.dismiss(afterDelay: 1.0)
-            
+                        
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false,
+                hideWhenBackgroundViewIsTapped: true
+            )
+            let alertSubView = SCLAlertView(appearance: appearance)
+            alertSubView.showSuccess("Found!", subTitle: "Will display first app only")
+
             let app = dataApps.first!
             titleLbl.text = "Title" + app.title!
             summaryLbl.text = app.summary
@@ -72,10 +75,12 @@ class SearchViewController: UIViewController {
             
         } else {
             
-            let hud = JGProgressHUD(style: .dark)
-            hud.textLabel.text = "Sorry, Not found"
-            hud.show(in: self.view)
-            hud.dismiss(afterDelay: 2.0)
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false,
+                hideWhenBackgroundViewIsTapped: true
+            )
+            let alertSubView = SCLAlertView(appearance: appearance)
+            alertSubView.showError("Sorry!", subTitle: "Not found")
 
         }
     }

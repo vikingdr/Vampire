@@ -10,5 +10,6 @@ target 'vampire' do
   pod 'JGProgressHUD'
   pod 'MailController'
   pod 'SDWebImage'
-  
+  pod 'SCLAlertView'
+
 end

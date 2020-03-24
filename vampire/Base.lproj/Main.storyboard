@@ -25,7 +25,13 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Load" image="plus.square.fill.on.square.fill" catalog="system" id="acW-dT-cKf"/>
-                    <navigationItem key="navigationItem" id="q13-hb-XHq"/>
+                    <navigationItem key="navigationItem" id="q13-hb-XHq">
+                        <barButtonItem key="rightBarButtonItem" title="Validate" image="magnifyingglass" catalog="system" id="adt-T5-Nt6">
+                            <connections>
+                                <action selector="validateBtnClicked:" destination="9pv-A4-QxB" id="e3i-bf-qj0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mTableView" destination="KaX-Vd-PUX" id="mTv-hk-giL"/>
                     </connections>

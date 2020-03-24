@@ -114,7 +114,6 @@
 		AC9F496B24284860005A4EE2 /* vampire */ = {
 			isa = PBXGroup;
 			children = (
-				ACBCEFC824293B0D00ED05C9 /* placeh@3x.png */,
 				AC9F49DC2428613A005A4EE2 /* CoreModels */,
 				AC9F49A32428571B005A4EE2 /* StorageController.swift */,
 				AC9F496C24284860005A4EE2 /* AppDelegate.swift */,
@@ -128,6 +127,7 @@
 				AC9F497C24284861005A4EE2 /* LaunchScreen.storyboard */,
 				AC9F497F24284861005A4EE2 /* Info.plist */,
 				AC9F497724284860005A4EE2 /* vampire.xcdatamodeld */,
+				ACBCEFC824293B0D00ED05C9 /* placeh@3x.png */,
 			);
 			path = vampire;
 			sourceTree = "<group>";

@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import SCLAlertView
+import JGProgressHUD
 
 class FirstViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
@@ -15,6 +17,52 @@ class FirstViewController: UIViewController,UITableViewDelegate, UITableViewData
     var jsonfiles: Array<String> = []
     var dataFiles : Array<Files> = []
 
+    @IBAction func validateBtnClicked(_ sender: Any) {
+        
+        let title = "Validate your keyword"
+        let message = "Please validate your keyword to avoid duplicate resource"
+        let appearance = SCLAlertView.SCLAppearance(
+           showCloseButton: false,
+           hideWhenBackgroundViewIsTapped: true
+        )
+
+        let alert = SCLAlertView(appearance: appearance)
+        let keyword = alert.addTextField("Keyword")
+
+        alert.addButton("Validate") {
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+            let manageContent = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Files")
+            let cond = NSPredicate(format: "fileName CONTAINS[c] %@", keyword.text!)
+            fetchRequest.predicate = cond
+            let jFiles = try! manageContent.fetch(fetchRequest) as! [Files]
+            
+            if(jFiles.count > 0) {
+                
+                let appearance = SCLAlertView.SCLAppearance(
+                    showCloseButton: false,
+                    hideWhenBackgroundViewIsTapped: true
+                )
+                let alertSubView = SCLAlertView(appearance: appearance)
+                alertSubView.showWarning("Sorry", subTitle: "Already exist")
+                
+            } else {
+                
+                let appearance = SCLAlertView.SCLAppearance(
+                    showCloseButton: false,
+                    hideWhenBackgroundViewIsTapped: true
+                )
+                let alertSubView = SCLAlertView(appearance: appearance)
+                alertSubView.showSuccess("Great!", subTitle: "New keyword")
+
+            }
+
+        }
+        alert.showNotice(title, subTitle: message)
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataFiles.count
     }

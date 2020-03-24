@@ -1,6 +1,7 @@
 PODS:
   - JGProgressHUD (2.1)
   - MailController (1.0.1)
+  - SCLAlertView (0.8)
   - SDWebImage (5.6.1):
     - SDWebImage/Core (= 5.6.1)
   - SDWebImage/Core (5.6.1)
@@ -9,6 +10,7 @@ PODS:
 DEPENDENCIES:
   - JGProgressHUD
   - MailController
+  - SCLAlertView
   - SDWebImage
   - SwiftyJSON
 
@@ -16,15 +18,17 @@ SPEC REPOS:
   trunk:
     - JGProgressHUD
     - MailController
+    - SCLAlertView
     - SDWebImage
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   MailController: ccdff683dea19b37897f5f59e484ffc5cf1cafc8
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 5101d19e777ba9387365f8f7c7f36cd2a00abe63
+PODFILE CHECKSUM: feb6b0b5658d44001b303277659459ef07f5124d
 
 COCOAPODS: 1.9.1

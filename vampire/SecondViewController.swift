@@ -148,8 +148,10 @@ class SecondViewController: UIViewController ,UITableViewDataSource, UITableView
         let add31 = NSPredicate(format: "NOT (developerAddress CONTAINS[c] %@)", "baku")
         let add32 = NSPredicate(format: "NOT (developerAddress CONTAINS[c] %@)", "HongKong")
         let add33 = NSPredicate(format: "NOT (developerAddress CONTAINS[c] %@)", "Hong Kong")
-        
-        let orPredicate = NSCompoundPredicate(type: .and, subpredicates: [isSent,cond1,cond2,cond3,cond4,cond5,cond6,cond7,cond8,cond9,cond10,cond11,cond12,cond13,cond14,add1,add2,add3,add4,add5,add6,add7,add8,add9,add10,add11,add12,add13,add14,add15,add16,add17,add18,add19,add20,add21,add22,add23,add24,add25,add26,add27,add28,add29,add30,add31,add32,add33])
+        let add34 = NSPredicate(format: "NOT (developerAddress CONTAINS[c] %@)", "delhi")
+        let add35 = NSPredicate(format: "NOT (genreId CONTAINS[c] %@)", "Game")
+
+        let orPredicate = NSCompoundPredicate(type: .and, subpredicates: [isSent,cond1,cond2,cond3,cond4,cond5,cond6,cond7,cond8,cond9,cond10,cond11,cond12,cond13,cond14,add1,add2,add3,add4,add5,add6,add7,add8,add9,add10,add11,add12,add13,add14,add15,add16,add17,add18,add19,add20,add21,add22,add23,add24,add25,add26,add27,add28,add29,add30,add31,add32,add33,add34,add35])
         fetchRequest.predicate = orPredicate
         dataApps = try! manageContent.fetch(fetchRequest) as! [Apps]
         
@@ -179,7 +181,7 @@ class SecondViewController: UIViewController ,UITableViewDataSource, UITableView
                 app.isSent = true
                 app.didSave()
                 
-                if counter == 5 {
+                if counter == 100 {
                     UIPasteboard.general.string = emails
                     
                     do{

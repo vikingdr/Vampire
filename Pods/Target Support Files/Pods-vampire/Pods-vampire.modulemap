@@ -1,0 +1,6 @@
+framework module Pods_vampire {
+  umbrella header "Pods-vampire-umbrella.h"
+
+  export *
+  module * { export * }
+}

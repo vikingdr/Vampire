@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Apps" representedClassName="Apps" syncable="YES">
+        <attribute name="developer" optional="YES" attributeType="String"/>
+        <attribute name="developerAddress" optional="YES" attributeType="String"/>
+        <attribute name="developerEmail" optional="YES" attributeType="String"/>
+        <attribute name="developerWebsite" optional="YES" attributeType="String"/>
+        <attribute name="genreId" optional="YES" attributeType="String"/>
+        <attribute name="icon" optional="YES" attributeType="String"/>
+        <attribute name="installs" optional="YES" attributeType="String"/>
+        <attribute name="isSent" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="keyword" optional="YES" attributeType="String"/>
+        <attribute name="recentChanges" optional="YES" attributeType="String"/>
+        <attribute name="released" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="score" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="sentdate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="updatedDate" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <attribute name="version" optional="YES" attributeType="String"/>
+        <relationship name="files" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Files"/>
+    </entity>
+    <entity name="Files" representedClassName="Files" syncable="YES">
+        <attribute name="fileName" optional="YES" attributeType="String"/>
+        <attribute name="isLoad" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="loadDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <elements>
+        <element name="Apps" positionX="-63" positionY="-18" width="128" height="328"/>
+        <element name="Files" positionX="-45" positionY="135" width="128" height="88"/>
+    </elements>
+</model>

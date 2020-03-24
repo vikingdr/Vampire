@@ -1,0 +1,30 @@
+PODS:
+  - JGProgressHUD (2.1)
+  - MailController (1.0.1)
+  - SDWebImage (5.6.1):
+    - SDWebImage/Core (= 5.6.1)
+  - SDWebImage/Core (5.6.1)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - JGProgressHUD
+  - MailController
+  - SDWebImage
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - JGProgressHUD
+    - MailController
+    - SDWebImage
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
+  MailController: ccdff683dea19b37897f5f59e484ffc5cf1cafc8
+  SDWebImage: 7edb9c3ea661e77a66661f7f044de8c1b55d1120
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 5101d19e777ba9387365f8f7c7f36cd2a00abe63
+
+COCOAPODS: 1.9.1

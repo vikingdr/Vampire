@@ -178,10 +178,13 @@ class SecondViewController: UIViewController ,UITableViewDataSource, UITableView
             for app in dataApps {
                 emails += app.developerEmail! + ","
                 counter += 1
+//                if counter % 5 == 0 {
+//                    emails += "\n"
+//                }
                 app.isSent = true
                 app.didSave()
                 
-                if counter == 100 {
+                if counter == 5 {
                     UIPasteboard.general.string = emails
                     
                     do{
@@ -189,7 +192,8 @@ class SecondViewController: UIViewController ,UITableViewDataSource, UITableView
                     }catch let error as NSError {
                         print("could not save . \(error), \(error.userInfo)")
                     }
-
+                    counter = 0
+                    
                     break;
                 }
             }

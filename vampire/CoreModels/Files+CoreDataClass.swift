@@ -2,7 +2,7 @@
 //  Files+CoreDataClass.swift
 //  
 //
-//  Created by vikingdr on 3/22/20.
+//  Created by Matthew James on 3/22/20.
 //
 //
 

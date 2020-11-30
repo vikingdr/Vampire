@@ -2,8 +2,8 @@
 //  FirstViewController.swift
 //  vampire
 //
-//  Created by vikingdr on 3/22/20.
-//  Copyright © 2020 vikingdr. All rights reserved.
+//  Created by Matthew James on 3/22/20.
+//  Copyright © 2020 Matthew James. All rights reserved.
 //
 
 import UIKit
